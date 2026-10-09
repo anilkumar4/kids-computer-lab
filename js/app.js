@@ -159,6 +159,14 @@ function renderHome() {
   const heroMascot = document.getElementById('hero-mascot');
   if (heroMascot && !heroMascot.hasChildNodes()) {
     heroMascot.innerHTML = createBoltSVG('wave', 180);
+    heroMascot.style.cursor = 'pointer';
+    heroMascot.title = "Click me!";
+    heroMascot.onclick = () => {
+      audio.playStar();
+      speech.speak("Welcome to the Kids Computer Lab! Pick a track below to start learning!");
+      heroMascot.style.animation = 'none';
+      setTimeout(() => heroMascot.style.animation = 'pop-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)', 10);
+    };
   }
 
   // Handle Track Selection
