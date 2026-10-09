@@ -1,0 +1,53 @@
+{
+  "id": "a7",
+  "track": "explorers",
+  "grade": "UKG",
+  "title": "Safe and Kind",
+  "summary": "Learn how to be safe and kind around computers.",
+  "duration": "5 min",
+  "objectives": ["Identify safe behaviors around computers", "Identify kind behaviors when sharing"],
+  "prerequisites": ["a1"],
+  "vocabulary": ["safe", "kind", "share"],
+  "steps": [
+    {
+      "type": "story",
+      "boltExpression": "happy",
+      "boltSpeech": "Computers are fun, but we must be careful with them!",
+      "content": {
+        "points": [
+          { "icon": "🚫💧", "text": "No water or juice near the computer!" },
+          { "icon": "🤝", "text": "Share the computer nicely with friends." },
+          { "icon": "👀", "text": "Always ask a grown-up before playing." }
+        ]
+      }
+    },
+    {
+      "type": "sort",
+      "boltExpression": "thinking",
+      "boltSpeech": "Help me sort these into Good and Bad things to do!",
+      "instructions": "Sort the actions into 'Good Idea' or 'Bad Idea'.",
+      "zones": [
+        { "id": "good", "title": "Good Idea", "icon": "✅" },
+        { "id": "bad", "title": "Bad Idea", "icon": "❌" }
+      ],
+      "items": [
+        { "id": "water", "label": "Drinking water over the keyboard", "zone": "bad", "icon": "💧" },
+        { "id": "share", "label": "Taking turns with a friend", "zone": "good", "icon": "🤝" },
+        { "id": "ask", "label": "Asking a teacher for help", "zone": "good", "icon": "🙋" },
+        { "id": "hit", "label": "Hitting the screen", "zone": "bad", "icon": "💥" }
+      ]
+    },
+    {
+      "type": "recap",
+      "boltExpression": "celebrate",
+      "boltSpeech": "You are a Little Explorer expert now!",
+      "content": {
+        "points": [
+          { "icon": "✅", "text": "Keep liquids away from computers." },
+          { "icon": "✅", "text": "Be gentle with the mouse and keyboard." },
+          { "icon": "✅", "text": "Share and take turns!" }
+        ]
+      }
+    }
+  ]
+}

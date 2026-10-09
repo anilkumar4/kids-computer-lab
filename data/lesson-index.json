@@ -1,0 +1,100 @@
+{
+  "tracks": {
+    "explorers": {
+      "id": "explorers",
+      "title": "Little Explorers",
+      "grade": "UKG",
+      "age": "5-6",
+      "description": "A gentle, picture-first introduction to computers.",
+      "lessons": [
+        {
+          "id": "a1",
+          "title": "Meet the Computer",
+          "summary": "Learn what a computer is and find computers around you.",
+          "status": "published"
+        },
+        {
+          "id": "a2",
+          "title": "Laptop and Desktop",
+          "summary": "Learn the difference between a laptop and a desktop.",
+          "status": "published"
+        },
+        {
+          "id": "a3",
+          "title": "Parts I Can See",
+          "summary": "Identify the screen, keyboard, mouse, and speakers.",
+          "status": "published"
+        },
+        {
+          "id": "a4",
+          "title": "Switch On, Switch Off",
+          "summary": "Learn how to safely turn a computer on and off.",
+          "status": "published"
+        },
+        {
+          "id": "a5",
+          "title": "Mouse Fun",
+          "summary": "Practice pointing, clicking, and dragging.",
+          "status": "published"
+        },
+        {
+          "id": "a6",
+          "title": "Keyboard Fun",
+          "summary": "Find letters and tap keys.",
+          "status": "published"
+        },
+        {
+          "id": "a7",
+          "title": "Safe and Kind",
+          "summary": "Learn how to be safe and kind around computers.",
+          "status": "published"
+        }
+      ]
+    },
+    "champions": {
+      "id": "champions",
+      "title": "Tech Champions",
+      "grade": "Class 4",
+      "age": "9-10",
+      "description": "Master computer basics, hardware, and safety.",
+      "lessons": [
+        {
+          "id": "b1",
+          "title": "What Is a Computer?",
+          "summary": "Learn about the input, process, output cycle.",
+          "status": "published"
+        },
+        {
+          "id": "b2",
+          "title": "Input & Output Devices",
+          "summary": "Sort and identify devices that send information in and out.",
+          "status": "published"
+        },
+        {
+          "id": "b3",
+          "title": "Inside the Box",
+          "summary": "Discover the CPU, memory, and storage.",
+          "status": "published"
+        },
+        {
+          "id": "b4",
+          "title": "Typing Basics",
+          "summary": "Learn about the home row and how to type faster.",
+          "status": "published"
+        },
+        {
+          "id": "b5",
+          "title": "Digital Citizenship",
+          "summary": "Learn about passwords and staying safe online.",
+          "status": "published"
+        },
+        {
+          "id": "b6",
+          "title": "Troubleshooting 101",
+          "summary": "What to do when things go wrong (check cables, restart).",
+          "status": "published"
+        }
+      ]
+    }
+  }
+}

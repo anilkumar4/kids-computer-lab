@@ -1,0 +1,77 @@
+{
+  "id": "b2",
+  "track": "champions",
+  "grade": "Class 4",
+  "title": "Input & Output Devices",
+  "summary": "Sort and identify devices that send information in and out.",
+  "duration": "10-15 min",
+  "objectives": ["Define input device", "Define output device", "Classify common peripherals"],
+  "prerequisites": ["b1"],
+  "vocabulary": ["input", "output", "peripheral", "device"],
+  "steps": [
+    {
+      "type": "story",
+      "boltExpression": "happy",
+      "content": {
+        "text": "Computers need ways to receive information from us, and ways to send information back to us.",
+        "points": [
+          { "icon": "📥", "text": "Input Devices: Send information INTO the computer (like typing or clicking)." },
+          { "icon": "📤", "text": "Output Devices: Send information OUT of the computer (like pictures on a screen or sound)." }
+        ]
+      }
+    },
+    {
+      "type": "sort",
+      "boltExpression": "thinking",
+      "boltSpeech": "Help me sort these devices! Drag or click them to the right category.",
+      "instructions": "Sort the devices into Input (sending data IN) or Output (getting data OUT).",
+      "zones": [
+        { "id": "input", "title": "Input (IN)", "icon": "📥" },
+        { "id": "output", "title": "Output (OUT)", "icon": "📤" }
+      ],
+      "items": [
+        { "id": "mouse", "label": "Mouse", "zone": "input", "icon": "🖱️" },
+        { "id": "monitor", "label": "Monitor", "zone": "output", "icon": "🖥️" },
+        { "id": "keyboard", "label": "Keyboard", "zone": "input", "icon": "⌨️" },
+        { "id": "printer", "label": "Printer", "zone": "output", "icon": "🖨️" },
+        { "id": "microphone", "label": "Microphone", "zone": "input", "icon": "🎤" },
+        { "id": "speakers", "label": "Speakers", "zone": "output", "icon": "🔊" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "boltExpression": "happy",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "prompt": "When you type on a keyboard, what are you doing?",
+          "options": [
+            { "label": "Giving the computer INPUT", "correct": true },
+            { "label": "Getting OUTPUT from the computer", "correct": false }
+          ],
+          "explanation": "Typing sends letters INTO the computer, so it is an input device."
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which of these is an OUTPUT device?",
+          "options": [
+            { "label": "Webcam", "correct": false },
+            { "label": "Headphones", "correct": true },
+            { "label": "Scanner", "correct": false }
+          ],
+          "explanation": "Headphones play sound OUT to you, making them an output device. Webcams and scanners take pictures IN."
+        }
+      ]
+    },
+    {
+      "type": "recap",
+      "boltExpression": "celebrate",
+      "content": {
+        "points": [
+          { "icon": "📥", "text": "Input devices (mouse, keyboard, mic) put data IN." },
+          { "icon": "📤", "text": "Output devices (screen, printer, speakers) get data OUT." }
+        ]
+      }
+    }
+  ]
+}

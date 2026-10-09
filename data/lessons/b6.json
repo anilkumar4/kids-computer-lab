@@ -1,0 +1,62 @@
+{
+  "id": "b6",
+  "track": "champions",
+  "grade": "Class 4",
+  "title": "Troubleshooting 101",
+  "summary": "What to do when things go wrong.",
+  "duration": "10 min",
+  "objectives": ["Identify basic troubleshooting steps", "Understand the concept of a restart"],
+  "prerequisites": [],
+  "vocabulary": ["troubleshoot", "restart", "reboot", "cable"],
+  "steps": [
+    {
+      "type": "story",
+      "boltExpression": "thinking",
+      "boltSpeech": "Sometimes, computers stop working right. Don't panic!",
+      "content": {
+        "text": "When a computer freezes or something won't turn on, we can Troubleshoot to fix it.",
+        "points": [
+          { "icon": "🔌", "text": "Step 1: Check the cables. Is it plugged in?" },
+          { "icon": "🔄", "text": "Step 2: Restart. Turning it off and on again fixes most problems!" },
+          { "icon": "🙋", "text": "Step 3: Ask for help from a teacher or parent." }
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "boltExpression": "thinking",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "prompt": "Your mouse is not moving the pointer on the screen. What is the FIRST thing you should check?",
+          "options": [
+            { "label": "Hit the monitor.", "correct": false },
+            { "label": "Check if the mouse cable is plugged in.", "correct": true },
+            { "label": "Buy a new computer.", "correct": false }
+          ]
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "The computer is completely frozen and nothing is clicking. What is the best troubleshooting step?",
+          "options": [
+            { "label": "Restart the computer.", "correct": true },
+            { "label": "Unplug the monitor.", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "recap",
+      "boltExpression": "celebrate",
+      "boltSpeech": "You are a Tech Champion!",
+      "content": {
+        "points": [
+          { "icon": "🏆", "text": "You know how computers work." },
+          { "icon": "🏆", "text": "You know how to type on the home row." },
+          { "icon": "🏆", "text": "You know how to be safe online and fix basic problems!" }
+        ],
+        "message": "Congratulations! You have completed the Tech Champions track!"
+      }
+    }
+  ]
+}

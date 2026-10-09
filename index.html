@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Kids Computer Lab - A friendly introduction to computers for young learners.">
+  <title>Kids Computer Lab</title>
+
+  <!-- Google Fonts (Nunito - Rounded, kid-friendly) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/theme.css">
+  <link rel="stylesheet" href="./css/print.css" media="print">
+
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#app-content" class="skip-link">Skip to main content</a>
+
+  <div id="app">
+    
+    <!-- Top Navigation -->
+    <header class="nav">
+      <div class="nav__inner">
+        <button id="nav-back" class="nav__back" style="display: none;" aria-label="Go back">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back
+        </button>
+        
+        <div class="nav__brand">
+          <!-- Small Bolt Icon -->
+          <svg viewBox="0 0 100 100" width="32" height="32">
+             <rect x="20" y="30" width="60" height="40" rx="10" fill="#7ec8e3" stroke="#5cb3d4" stroke-width="3"/>
+             <ellipse cx="35" cy="45" rx="5" ry="6" fill="#fff"/>
+             <ellipse cx="65" cy="45" rx="5" ry="6" fill="#fff"/>
+             <circle cx="36" cy="45" r="2" fill="#2c3e50"/>
+             <circle cx="66" cy="45" r="2" fill="#2c3e50"/>
+             <path d="M40 55 Q50 65 60 55" stroke="#2c3e50" stroke-width="2" fill="none"/>
+             <line x1="50" y1="30" x2="50" y2="15" stroke="#b0bec5" stroke-width="3"/>
+             <circle cx="50" cy="15" r="4" fill="#f1c40f"/>
+          </svg>
+          Kids Computer Lab
+        </div>
+
+        <div class="nav__controls">
+          <button id="sound-toggle" class="sound-toggle" aria-label="Toggle sound">
+            🔊
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="app-content">
+      
+      <!-- ==================== HOME VIEW ==================== -->
+      <section id="view-home" class="view">
+        <div class="hero">
+          <div class="deco-dots" style="top: -50px; left: -50px;"></div>
+          <div class="deco-dots" style="bottom: -50px; right: -50px;"></div>
+          
+          <div id="hero-mascot" class="hero__mascot animate-float">
+            <!-- SVG injected by JS -->
+          </div>
+          
+          <h1 class="hero__title animate-slide-up">
+            Welcome to<br>
+            <span class="text-primary">Kids</span> <span class="text-accent">Computer</span> <span class="text-success">Lab</span>!
+          </h1>
+          <p class="hero__subtitle animate-slide-up" style="animation-delay: 0.1s;">
+            A fun, safe place to learn how computers work. Choose your track below to start exploring!
+          </p>
+
+          <!-- Quick Resume Banner (hidden by default) -->
+          <div id="resume-banner" class="resume-banner animate-slide-up" style="display: none; animation-delay: 0.2s;" role="button" tabindex="0">
+            <div class="resume-banner__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+            <div class="resume-banner__text" style="text-align: left;">
+              <div class="resume-banner__title">Continue Learning</div>
+              <div class="resume-banner__lesson">Loading...</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container animate-slide-up" style="animation-delay: 0.2s;">
+          <div class="track-grid stagger-children">
+            
+            <!-- Track: Little Explorers -->
+            <div id="btn-explorers" class="card card--interactive card--explorers" role="button" tabindex="0">
+              <div class="card__badge">UKG (Ages 5-6)</div>
+              <div class="card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <h2 class="card__title">Little Explorers</h2>
+              <p class="card__subtitle">A gentle, picture-first introduction to computers. Tap and play!</p>
+            </div>
+            
+            <!-- Track: Tech Champions -->
+            <div id="btn-champions" class="card card--interactive card--champions" role="button" tabindex="0">
+              <div class="card__badge">Class 4 (Ages 9-10)</div>
+              <div class="card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                  <path d="M4 22h16"></path>
+                  <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                  <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                  <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                </svg>
+              </div>
+              <h2 class="card__title">Tech Champions</h2>
+              <p class="card__subtitle">Master computer hardware, typing, and safety. Real skills!</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TRACK VIEW ==================== -->
+      <section id="view-track" class="view">
+        <div id="track-header" class="track-header">
+          <!-- Injected by JS -->
+        </div>
+
+        <div class="container container--lg">
+          <div class="track-progress">
+            <div class="track-progress__bar">
+              <div id="track-progress-fill" class="track-progress__fill" style="width: 0%"></div>
+            </div>
+            <div id="track-progress-text" class="track-progress__text">0 / 0</div>
+          </div>
+
+          <div id="lesson-list" class="lesson-list stagger-children" style="max-width: 720px; margin: var(--space-6) auto;">
+            <!-- Lessons injected by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== LESSON VIEW ==================== -->
+      <section id="view-lesson" class="view container">
+        <!-- Rendered entirely by LessonRenderer -->
+      </section>
+
+      <!-- ==================== GROWN-UPS VIEW ==================== -->
+      <section id="view-grownups" class="view container animate-fade-in">
+        <div class="grownups">
+          <div style="text-align:center; margin-bottom: var(--space-8);">
+            <h1>👨‍👩‍👧 For Grown-ups</h1>
+            <p style="color:var(--color-text-secondary); margin-top:var(--space-2);">Guide, privacy, and resources for parents & teachers.</p>
+          </div>
+          
+          <div class="grownups__section">
+            <h2>About Kids Computer Lab</h2>
+            <p>This is a safe, ad-free educational space designed to introduce foundational computer literacy.</p>
+            <ul>
+              <li><strong>Little Explorers (UKG):</strong> Focuses on recognizing a computer, mouse/touchpad basics, and basic safety. Needs adult supervision.</li>
+              <li><strong>Tech Champions (Class 4):</strong> CBSE-friendly hardware concepts, typing basics, and digital citizenship. Can be done independently.</li>
+            </ul>
+          </div>
+
+          <div class="grownups__section">
+            <h2>🔒 Privacy & Data</h2>
+            <p>This application is completely private by design:</p>
+            <ul>
+              <li><strong>No accounts required.</strong> Progress is saved directly to your device's web browser (localStorage).</li>
+              <li><strong>No tracking.</strong> We do not collect names, emails, usage data, or analytics.</li>
+              <li><strong>No ads or external links</strong> in the child-facing areas.</li>
+            </ul>
+            <p><em>Note: If you clear your browser history/data, progress will be lost.</em></p>
+            
+            <button class="btn btn--outline" style="margin-top:var(--space-4);" onclick="if(confirm('Are you sure you want to erase all progress?')) { window.localStorage.clear(); window.location.href = window.location.pathname; }">
+              Reset All Progress
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <a href="#/grownups" class="footer__link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 16v-4"></path>
+            <path d="M12 8h.01"></path>
+          </svg>
+          For Grown-ups (Privacy & Info)
+        </a>
+      </div>
+    </footer>
+    
+  </div>
+
+  <!-- Global Toast Notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Certificate Template (Hidden on screen, visible on print) -->
+  <div id="certificate" class="certificate" style="display: none;">
+    <div class="certificate__inner">
+      <h1>🏆 Certificate of Achievement 🏆</h1>
+      <p>This certifies that you have completed</p>
+      <h2 id="cert-track-name">The Kids Computer Lab</h2>
+      <p>and are now a certified Computer Whiz!</p>
+      <div class="certificate__mascot">
+        <svg viewBox="0 0 200 200" width="120" height="120">
+          <rect x="55" y="42" width="90" height="72" rx="22" fill="#7ec8e3" stroke="#5cb3d4" stroke-width="2"/>
+          <ellipse cx="75" cy="80" rx="10" ry="11" fill="#fff"/>
+          <ellipse cx="125" cy="80" rx="10" ry="11" fill="#fff"/>
+          <circle cx="77" cy="82" r="5" fill="#2c3e50"/>
+          <circle cx="127" cy="82" r="5" fill="#2c3e50"/>
+          <path d="M78 98 Q100 118 122 98" stroke="#2c3e50" stroke-width="3" fill="#fff"/>
+        </svg>
+      </div>
+      <div class="certificate__signature">
+        <div class="line"></div>
+        <p>Bolt the Robot</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Script -->
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

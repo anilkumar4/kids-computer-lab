@@ -1,0 +1,79 @@
+/**
+ * Kids Computer Lab — Print Styles
+ * Used for printing certificates and worksheets.
+ */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide the entire app UI when printing */
+  #app {
+    display: none !important;
+  }
+
+  /* Show and format the certificate */
+  .certificate {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+  }
+
+  .certificate__inner {
+    border: 10px double #7ec8e3;
+    padding: 40px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 20px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+
+  .certificate__inner h1 {
+    font-size: 32pt;
+    color: #f0a03c;
+    margin-bottom: 20px;
+  }
+
+  .certificate__inner h2 {
+    font-size: 24pt;
+    color: #333;
+    margin: 20px 0;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+
+  .certificate__mascot {
+    margin: 30px 0;
+  }
+
+  .certificate__signature {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .certificate__signature .line {
+    width: 200px;
+    height: 2px;
+    background: #000;
+    margin-bottom: 10px;
+  }
+
+  .certificate__signature p {
+    font-size: 14pt;
+    font-style: italic;
+  }
+}

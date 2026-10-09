@@ -1,0 +1,67 @@
+{
+  "id": "b3",
+  "track": "champions",
+  "grade": "Class 4",
+  "title": "Inside the Box",
+  "summary": "Discover the CPU, memory, and storage.",
+  "duration": "10-15 min",
+  "objectives": ["Identify the CPU as the brain", "Differentiate between short-term memory (RAM) and long-term storage"],
+  "prerequisites": ["b1"],
+  "vocabulary": ["CPU", "Processor", "RAM", "Memory", "Storage", "Hard Drive"],
+  "steps": [
+    {
+      "type": "story",
+      "boltExpression": "thinking",
+      "boltSpeech": "What's happening inside the computer case?",
+      "content": {
+        "text": "Inside the computer case (or inside the laptop body), there are important chips and drives working together.",
+        "points": [
+          { "icon": "🧠", "text": "CPU (Central Processing Unit): The brain. It does all the thinking and calculating." },
+          { "icon": "📝", "text": "RAM (Memory): Short-term memory. It holds what the computer is working on right NOW." },
+          { "icon": "🗄️", "text": "Storage (Hard Drive/SSD): Long-term memory. It saves your files even when the power is off." }
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "boltExpression": "thinking",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "prompt": "Which part is known as the 'brain' of the computer?",
+          "options": [
+            { "label": "Storage (Hard Drive)", "correct": false },
+            { "label": "CPU (Processor)", "correct": true },
+            { "label": "RAM (Memory)", "correct": false }
+          ],
+          "explanation": "The CPU (Central Processing Unit) processes instructions, acting like a brain."
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "If you want to save a picture forever, where does the computer put it?",
+          "options": [
+            { "label": "In RAM (Short-term memory)", "correct": false },
+            { "label": "In Storage (Hard Drive/SSD)", "correct": true }
+          ],
+          "explanation": "Storage keeps your files safe even when the computer is turned off. RAM is cleared when the power goes out."
+        }
+      ]
+    },
+    {
+      "type": "sort",
+      "boltExpression": "happy",
+      "boltSpeech": "Match the part to its human body equivalent!",
+      "instructions": "Sort the computer parts into Brain, Desk (Working space), or Filing Cabinet (Storage).",
+      "zones": [
+        { "id": "brain", "title": "Brain (Thinking)", "icon": "🧠" },
+        { "id": "desk", "title": "Desk (Working)", "icon": "📝" },
+        { "id": "cabinet", "title": "Cabinet (Saving)", "icon": "🗄️" }
+      ],
+      "items": [
+        { "id": "cpu", "label": "CPU (Central Processing Unit)", "zone": "brain" },
+        { "id": "ram", "label": "RAM (Random Access Memory)", "zone": "desk" },
+        { "id": "hdd", "label": "Hard Drive", "zone": "cabinet" }
+      ]
+    }
+  ]
+}

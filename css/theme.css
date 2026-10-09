@@ -1,0 +1,293 @@
+/* ============================================================
+   Kids Computer Lab — Theme
+   Hero, home page, track pages, and layout compositions
+   ============================================================ */
+
+/* --- Hero Section (Home Page) --- */
+.hero {
+  background: var(--gradient-hero);
+  padding: var(--space-12) var(--space-4) var(--space-8);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(circle, hsla(199, 80%, 52%, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  right: -20%;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(circle, hsla(25, 95%, 58%, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero__mascot {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto var(--space-4);
+  filter: drop-shadow(0 4px 12px hsla(199, 80%, 52%, 0.3));
+}
+
+@media (min-width: 768px) {
+  .hero__mascot {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.hero__title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-weight-extra);
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: var(--text-5xl);
+  }
+}
+
+.hero__subtitle {
+  font-size: var(--text-xl);
+  color: var(--color-text-secondary);
+  max-width: 480px;
+  margin: 0 auto var(--space-2);
+  line-height: 1.5;
+}
+
+/* Title accent colour spans */
+.text-primary { color: var(--color-primary); }
+.text-accent  { color: var(--color-accent); }
+.text-success { color: var(--color-success); }
+
+/* --- Track Page Header --- */
+.track-header {
+  padding: var(--space-8) var(--space-4) var(--space-6);
+  text-align: center;
+}
+
+.track-header--explorers {
+  background: linear-gradient(180deg, hsl(25, 80%, 96%), var(--color-bg));
+}
+
+.track-header--champions {
+  background: linear-gradient(180deg, hsl(199, 60%, 95%), var(--color-bg));
+}
+
+.track-header__icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-4);
+}
+
+.track-header__title {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-2);
+}
+
+.track-header__desc {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* --- Track Progress Summary --- */
+.track-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  margin: var(--space-4) auto;
+  max-width: 400px;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.track-progress__bar {
+  flex: 1;
+  height: 8px;
+  background: var(--color-surface);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.track-progress__fill {
+  height: 100%;
+  background: var(--color-success);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+  min-width: 0;
+}
+
+.track-progress__text {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+/* --- Home Quick Resume --- */
+.resume-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-primary-light);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  margin: var(--space-4) auto;
+  max-width: var(--max-width);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.resume-banner:hover {
+  background: hsla(199, 80%, 90%, 0.8);
+  box-shadow: var(--shadow-md);
+}
+
+.resume-banner__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.resume-banner__text {
+  flex: 1;
+}
+
+.resume-banner__title {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-1);
+}
+
+.resume-banner__lesson {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+/* --- Footer / Grown-ups Link --- */
+.footer {
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.footer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  font-weight: var(--font-weight-medium);
+}
+
+.footer__link:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+/* --- Grown-ups Page --- */
+.grownups {
+  padding: var(--space-8) var(--space-4);
+}
+
+.grownups__section {
+  margin-bottom: var(--space-8);
+  padding: var(--space-6);
+  background: var(--color-bg-card);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.grownups__section h2 {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid var(--color-surface);
+}
+
+.grownups__section p,
+.grownups__section li {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-3);
+}
+
+.grownups__section ul {
+  padding-left: var(--space-6);
+  list-style: disc;
+}
+
+/* --- Empty State --- */
+.empty-state {
+  text-align: center;
+  padding: var(--space-12) var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.empty-state__icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-4);
+  opacity: 0.5;
+}
+
+.empty-state__title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+}
+
+/* --- Decorative Elements --- */
+.deco-dots {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(circle, var(--color-primary-light) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* --- App Shell --- */
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#app-content {
+  flex: 1;
+}
+
+/* Hide views by default, show active */
+.view { display: none; }
+.view--active { display: block; }

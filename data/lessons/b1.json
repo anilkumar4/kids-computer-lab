@@ -1,0 +1,67 @@
+{
+  "id": "b1",
+  "track": "champions",
+  "grade": "Class 4",
+  "title": "What Is a Computer?",
+  "summary": "Learn about the input, process, output cycle.",
+  "duration": "10-15 min",
+  "objectives": ["Define a computer", "Explain the IPO (Input-Process-Output) cycle"],
+  "prerequisites": [],
+  "vocabulary": ["computer", "input", "process", "output", "data", "information"],
+  "steps": [
+    {
+      "type": "story",
+      "boltExpression": "thinking",
+      "boltSpeech": "What exactly IS a computer?",
+      "content": {
+        "text": "A computer is an electronic machine that takes in data, processes it, and gives out meaningful information. It works in three main steps called the IPO cycle.",
+        "points": [
+          { "icon": "1️⃣", "text": "INPUT: You give data and instructions to the computer." },
+          { "icon": "2️⃣", "text": "PROCESS: The computer works on the data to find the answer." },
+          { "icon": "3️⃣", "text": "OUTPUT: The computer shows you the result." }
+        ]
+      }
+    },
+    {
+      "type": "hotspot",
+      "boltExpression": "pointing",
+      "boltSpeech": "Click to see the IPO cycle in action, like making a smoothie!",
+      "diagramLabel": "The IPO Cycle Analogy",
+      "svgContent": "<svg viewBox=\"0 0 500 200\" width=\"100%\" style=\"height: auto;\"><rect x=\"20\" y=\"50\" width=\"120\" height=\"100\" rx=\"10\" fill=\"#e0f7fa\" stroke=\"#00acc1\" stroke-width=\"4\"/><text x=\"80\" y=\"110\" font-size=\"40\" text-anchor=\"middle\">🍎</text><text x=\"80\" y=\"40\" font-size=\"20\" text-anchor=\"middle\" font-weight=\"bold\">INPUT</text><path d=\"M150,100 L190,100 L180,90 M190,100 L180,110\" stroke=\"#555\" stroke-width=\"4\" fill=\"none\"/><rect x=\"200\" y=\"50\" width=\"120\" height=\"100\" rx=\"10\" fill=\"#fff3e0\" stroke=\"#fb8c00\" stroke-width=\"4\"/><text x=\"260\" y=\"110\" font-size=\"40\" text-anchor=\"middle\">🌪️</text><text x=\"260\" y=\"40\" font-size=\"20\" text-anchor=\"middle\" font-weight=\"bold\">PROCESS</text><path d=\"M330,100 L370,100 L360,90 M370,100 L360,110\" stroke=\"#555\" stroke-width=\"4\" fill=\"none\"/><rect x=\"380\" y=\"50\" width=\"120\" height=\"100\" rx=\"10\" fill=\"#e8f5e9\" stroke=\"#43a047\" stroke-width=\"4\"/><text x=\"440\" y=\"110\" font-size=\"40\" text-anchor=\"middle\">🥤</text><text x=\"440\" y=\"40\" font-size=\"20\" text-anchor=\"middle\" font-weight=\"bold\">OUTPUT</text></svg>",
+      "hotspots": [
+        { "id": "input", "label": "Input (Data)", "description": "Like putting fresh fruit into a blender. In a computer, this is typing '2 + 2'.", "icon": "📥", "x": 10, "y": 60 },
+        { "id": "process", "label": "Process", "description": "The blender mixing the fruit. The computer calculates '2 + 2 = 4'.", "icon": "⚙️", "x": 45, "y": 60 },
+        { "id": "output", "label": "Output (Information)", "description": "The finished smoothie! The computer shows '4' on the screen.", "icon": "📤", "x": 80, "y": 60 }
+      ]
+    },
+    {
+      "type": "sort",
+      "boltExpression": "happy",
+      "boltSpeech": "Let's sort the steps!",
+      "instructions": "Sort these actions into Input, Process, or Output.",
+      "zones": [
+        { "id": "input", "title": "Input", "icon": "📥" },
+        { "id": "process", "title": "Process", "icon": "⚙️" },
+        { "id": "output", "title": "Output", "icon": "📤" }
+      ],
+      "items": [
+        { "id": "typing", "label": "Typing a math problem", "zone": "input" },
+        { "id": "calculating", "label": "The CPU adding numbers", "zone": "process" },
+        { "id": "printing", "label": "Printing the answer", "zone": "output" },
+        { "id": "clicking", "label": "Clicking a game icon", "zone": "input" }
+      ]
+    },
+    {
+      "type": "recap",
+      "boltExpression": "celebrate",
+      "boltSpeech": "Great job!",
+      "content": {
+        "points": [
+          { "icon": "1️⃣", "text": "Input is what we tell the computer." },
+          { "icon": "2️⃣", "text": "Process is the computer thinking." },
+          { "icon": "3️⃣", "text": "Output is the result we get back." }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "b4",
+  "track": "champions",
+  "grade": "Class 4",
+  "title": "Typing Basics",
+  "summary": "Learn about the home row and how to type faster.",
+  "duration": "10-15 min",
+  "objectives": ["Identify the Home Row", "Understand correct finger placement"],
+  "prerequisites": [],
+  "vocabulary": ["Home Row", "QWERTY", "Spacebar"],
+  "steps": [
+    {
+      "type": "story",
+      "boltExpression": "happy",
+      "boltSpeech": "Want to type really fast? There is a secret trick!",
+      "content": {
+        "text": "The secret to typing fast without looking is starting with your fingers on the HOME ROW.",
+        "points": [
+          { "icon": "✋", "text": "Left hand rests on A, S, D, F." },
+          { "icon": "🤚", "text": "Right hand rests on J, K, L, ;." },
+          { "icon": "👆", "text": "Your thumbs rest on the big Spacebar." }
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "boltExpression": "thinking",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "prompt": "Which letters are the resting place for your LEFT hand?",
+          "options": [
+            { "label": "Q W E R", "correct": false },
+            { "label": "A S D F", "correct": true },
+            { "label": "Z X C V", "correct": false }
+          ],
+          "explanation": "A, S, D, F is the left half of the Home Row."
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "Which finger should you use to press the Spacebar?",
+          "options": [
+            { "label": "Pointer finger", "correct": false },
+            { "label": "Pinky finger", "correct": false },
+            { "label": "Thumb", "correct": true }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "typing",
+      "boltExpression": "encouraging",
+      "boltSpeech": "Let's practice finding the home row letters!",
+      "instructions": "Type the letters A, S, D, F, J, K, L in order.",
+      "sequence": ["A", "S", "D", "F", "J", "K", "L"]
+    },
+    {
+      "type": "recap",
+      "boltExpression": "celebrate",
+      "content": {
+        "points": [
+          { "icon": "⌨️", "text": "Always bring your fingers back to the Home Row." },
+          { "icon": "👀", "text": "Keep your eyes on the screen, not the keys!" }
+        ]
+      }
+    }
+  ]
+}

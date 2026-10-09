@@ -1,0 +1,49 @@
+{
+  "id": "a3",
+  "track": "explorers",
+  "grade": "UKG",
+  "title": "Parts I Can See",
+  "summary": "Identify the screen, keyboard, mouse, and speakers.",
+  "duration": "5-8 min",
+  "objectives": ["Identify main computer peripherals"],
+  "prerequisites": ["a1"],
+  "vocabulary": ["screen", "keyboard", "mouse", "speaker"],
+  "steps": [
+    {
+      "type": "hotspot",
+      "boltExpression": "pointing",
+      "boltSpeech": "A computer has many parts. Tap each part to see what it does!",
+      "diagramLabel": "A desktop computer setup",
+      "svgContent": "<svg viewBox=\"0 0 400 300\" width=\"100%\" style=\"height: auto;\"><rect x=\"100\" y=\"40\" width=\"180\" height=\"120\" rx=\"5\" fill=\"#333\"/><rect x=\"105\" y=\"45\" width=\"170\" height=\"110\" fill=\"#e0f7fa\"/><rect x=\"170\" y=\"160\" width=\"40\" height=\"30\" fill=\"#888\"/><rect x=\"140\" y=\"190\" width=\"100\" height=\"10\" rx=\"2\" fill=\"#555\"/><rect x=\"120\" y=\"220\" width=\"160\" height=\"20\" rx=\"2\" fill=\"#aaa\"/><rect x=\"300\" y=\"220\" width=\"30\" height=\"40\" rx=\"10\" fill=\"#999\"/><rect x=\"50\" y=\"80\" width=\"30\" height=\"60\" fill=\"#444\"/><rect x=\"300\" y=\"80\" width=\"30\" height=\"60\" fill=\"#444\"/></svg>",
+      "hotspots": [
+        { "id": "screen", "label": "Screen", "description": "It shows you pictures and games.", "icon": "🖥️", "x": 45, "y": 40 },
+        { "id": "keyboard", "label": "Keyboard", "description": "It has buttons with letters.", "icon": "⌨️", "x": 45, "y": 75 },
+        { "id": "mouse", "label": "Mouse", "description": "You hold it in your hand to point.", "icon": "🖱️", "x": 75, "y": 75 },
+        { "id": "speakers", "label": "Speakers", "description": "They play sounds and music.", "icon": "🔊", "x": 15, "y": 30 }
+      ]
+    },
+    {
+      "type": "quiz",
+      "boltExpression": "thinking",
+      "boltSpeech": "Let's see what you remember!",
+      "questions": [
+        {
+          "type": "picture-choice",
+          "prompt": "Which part has lots of buttons?",
+          "options": [
+            { "label": "Mouse", "correct": false, "image": "<svg viewBox=\"0 0 100 100\"><rect x=\"30\" y=\"30\" width=\"40\" height=\"60\" rx=\"20\" fill=\"#999\"/></svg>" },
+            { "label": "Keyboard", "correct": true, "image": "<svg viewBox=\"0 0 100 100\"><rect x=\"10\" y=\"40\" width=\"80\" height=\"30\" rx=\"2\" fill=\"#aaa\"/></svg>" }
+          ]
+        },
+        {
+          "type": "picture-choice",
+          "prompt": "Which part plays music?",
+          "options": [
+            { "label": "Speaker", "correct": true, "image": "<svg viewBox=\"0 0 100 100\"><rect x=\"30\" y=\"20\" width=\"40\" height=\"60\" fill=\"#444\"/></svg>" },
+            { "label": "Screen", "correct": false, "image": "<svg viewBox=\"0 0 100 100\"><rect x=\"20\" y=\"20\" width=\"60\" height=\"50\" fill=\"#333\"/></svg>" }
+          ]
+        }
+      ]
+    }
+  ]
+}

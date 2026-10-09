@@ -1,0 +1,46 @@
+{
+  "id": "a5",
+  "track": "explorers",
+  "grade": "UKG",
+  "title": "Mouse Fun",
+  "summary": "Practice pointing, clicking, and dragging.",
+  "duration": "5-8 min",
+  "objectives": ["Move the mouse pointer", "Click on objects"],
+  "prerequisites": ["a3"],
+  "vocabulary": ["mouse", "click", "pointer"],
+  "steps": [
+    {
+      "type": "story",
+      "boltExpression": "happy",
+      "boltSpeech": "The mouse helps us point at things on the screen!",
+      "content": {
+        "text": "When you move the mouse on the table, the pointer moves on the screen. Let's practice clicking!",
+        "svgContent": "<svg viewBox=\"0 0 100 100\" width=\"150px\" height=\"150px\"><path d=\"M20,20 L80,50 L50,60 L70,90 L60,100 L40,65 L20,80 Z\" fill=\"#fff\" stroke=\"#333\" stroke-width=\"4\"/></svg>"
+      }
+    },
+    {
+      "type": "mouseGame",
+      "boltExpression": "encouraging",
+      "boltSpeech": "Move your mouse or finger and tap the stars as fast as you can!",
+      "instructions": "Tap the 5 stars!",
+      "targets": 5,
+      "gameType": "click"
+    },
+    {
+      "type": "story",
+      "boltExpression": "happy",
+      "boltSpeech": "Now let's try dragging!",
+      "content": {
+        "text": "Click, hold, and move to drag something."
+      }
+    },
+    {
+      "type": "mouseGame",
+      "boltExpression": "encouraging",
+      "boltSpeech": "Drag the stars into the basket!",
+      "instructions": "Drag 3 stars into the box!",
+      "targets": 3,
+      "gameType": "drag"
+    }
+  ]
+}

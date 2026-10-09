@@ -1,0 +1,57 @@
+{
+  "id": "a2",
+  "track": "explorers",
+  "grade": "UKG",
+  "title": "Laptop and Desktop",
+  "summary": "Learn the difference between a laptop and a desktop.",
+  "duration": "5-8 min",
+  "objectives": ["Distinguish between laptop and desktop computers"],
+  "prerequisites": ["a1"],
+  "vocabulary": ["laptop", "desktop"],
+  "steps": [
+    {
+      "type": "story",
+      "boltExpression": "happy",
+      "boltSpeech": "Computers come in different shapes!",
+      "content": {
+        "text": "Some computers are big and sit on a desk. They are called Desktops. Some computers are small and fold up. They are called Laptops.",
+        "points": [
+          { "icon": "🖥️", "text": "Desktop: Stays on a desk." },
+          { "icon": "💻", "text": "Laptop: Folds up and can be carried." }
+        ]
+      }
+    },
+    {
+      "type": "sort",
+      "boltExpression": "thinking",
+      "boltSpeech": "Can you put the computers in the right place?",
+      "instructions": "Sort the computers into Desktops and Laptops.",
+      "zones": [
+        { "id": "desktop", "title": "Desktop", "icon": "🖥️" },
+        { "id": "laptop", "title": "Laptop", "icon": "💻" }
+      ],
+      "items": [
+        { "id": "d1", "label": "Big Monitor Computer", "zone": "desktop", "icon": "🖥️" },
+        { "id": "l1", "label": "Folding Computer", "zone": "laptop", "icon": "💻" },
+        { "id": "l2", "label": "Silver Laptop", "zone": "laptop", "icon": "💻" },
+        { "id": "d2", "label": "Tower Computer", "zone": "desktop", "icon": "🖧" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "boltExpression": "wave",
+      "boltSpeech": "One last question!",
+      "questions": [
+        {
+          "type": "picture-choice",
+          "prompt": "Which computer can you fold and take with you?",
+          "options": [
+            { "label": "Desktop", "correct": false, "image": "<svg viewBox=\"0 0 100 100\"><rect x=\"20\" y=\"20\" width=\"60\" height=\"50\" fill=\"#333\"/></svg>" },
+            { "label": "Laptop", "correct": true, "image": "<svg viewBox=\"0 0 100 100\"><path d=\"M20,60 L80,60 L75,20 L25,20 Z\" fill=\"#555\"/></svg>" }
+          ],
+          "feedback": { "correct": "Correct! A laptop is easy to carry.", "incorrect": "A desktop is usually too big to carry around." }
+        }
+      ]
+    }
+  ]
+}

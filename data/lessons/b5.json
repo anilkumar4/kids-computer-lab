@@ -1,0 +1,65 @@
+{
+  "id": "b5",
+  "track": "champions",
+  "grade": "Class 4",
+  "title": "Digital Citizenship",
+  "summary": "Learn about passwords and staying safe online.",
+  "duration": "10 min",
+  "objectives": ["Understand the importance of strong passwords", "Identify safe online behavior"],
+  "prerequisites": [],
+  "vocabulary": ["password", "privacy", "digital citizen"],
+  "steps": [
+    {
+      "type": "story",
+      "boltExpression": "thinking",
+      "boltSpeech": "When we connect to the Internet, we enter a digital world.",
+      "content": {
+        "text": "Being a good Digital Citizen means staying safe and treating others with respect.",
+        "points": [
+          { "icon": "🔐", "text": "Keep your passwords a secret (except from parents/teachers)." },
+          { "icon": "🗣️", "text": "Never share your real name, address, or school with strangers online." },
+          { "icon": "💬", "text": "If someone is mean online, don't reply. Tell a trusted adult." }
+        ]
+      }
+    },
+    {
+      "type": "sort",
+      "boltExpression": "thinking",
+      "boltSpeech": "Is this safe to share online?",
+      "instructions": "Sort into 'Safe to Share' or 'Keep Private'.",
+      "zones": [
+        { "id": "safe", "title": "Safe to Share", "icon": "✅" },
+        { "id": "private", "title": "Keep Private", "icon": "🛑" }
+      ],
+      "items": [
+        { "id": "color", "label": "Your favorite color", "zone": "safe" },
+        { "id": "password", "label": "Your password", "zone": "private" },
+        { "id": "address", "label": "Your home address", "zone": "private" },
+        { "id": "hobby", "label": "A game you like to play", "zone": "safe" }
+      ]
+    },
+    {
+      "type": "quiz",
+      "boltExpression": "thinking",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "prompt": "What makes a STRONG password?",
+          "options": [
+            { "label": "Your pet's name", "correct": false },
+            { "label": "The word 'password' or '123456'", "correct": false },
+            { "label": "A mix of letters, numbers, and symbols", "correct": true }
+          ]
+        },
+        {
+          "type": "multiple-choice",
+          "prompt": "If a game asks for your full name and address to win a prize, what should you do?",
+          "options": [
+            { "label": "Type it in quickly!", "correct": false },
+            { "label": "Stop and ask a trusted grown-up first.", "correct": true }
+          ]
+        }
+      ]
+    }
+  ]
+}
