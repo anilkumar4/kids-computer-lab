@@ -15,6 +15,8 @@ import store from '../store.js';
 import audio from '../audio.js';
 import speech from '../speech.js';
 
+import { throwConfetti } from '../ui/confetti.js';
+
 /**
  * Main lesson renderer class.
  */
@@ -528,23 +530,7 @@ export class LessonRenderer {
     audio.playComplete();
 
     // Add confetti
-    for (let i = 0; i < 30; i++) {
-      const confetti = document.createElement('div');
-      confetti.style.cssText = `
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background-color: ${['#f1c40f', '#e74c3c', '#3498db', '#2ecc71', '#9b59b6'][Math.floor(Math.random() * 5)]};
-        left: ${Math.random() * 100}%;
-        top: -10px;
-        border-radius: ${Math.random() > 0.5 ? '50%' : '0'};
-        opacity: 0;
-        pointer-events: none;
-        animation: confettiFall ${1 + Math.random() * 2}s ease-in forwards;
-        animation-delay: ${Math.random() * 0.5}s;
-      `;
-      div.appendChild(confetti);
-    }
+    throwConfetti();
 
     return div;
   }

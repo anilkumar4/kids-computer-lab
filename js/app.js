@@ -10,6 +10,8 @@ import audio from './audio.js';
 import speech from './speech.js';
 import { createBoltSVG } from './ui/mascot.js';
 import LessonRenderer from './lessons/renderer.js';
+import { throwConfetti } from './ui/confetti.js';
+import { renderStickerBook } from './ui/stickers.js';
 
 // --- State ---
 let lessonIndex = null;
@@ -21,6 +23,7 @@ const DOM = {
   trackView: document.getElementById('view-track'),
   lessonView: document.getElementById('view-lesson'),
   grownupsView: document.getElementById('view-grownups'),
+  stickersView: document.getElementById('view-stickers'),
   navBack: document.getElementById('nav-back'),
   soundToggle: document.getElementById('sound-toggle'),
   toast: document.getElementById('toast'),
@@ -115,6 +118,7 @@ function hideAllViews() {
   DOM.trackView.classList.remove('view--active');
   DOM.lessonView.classList.remove('view--active');
   DOM.grownupsView.classList.remove('view--active');
+  DOM.stickersView.classList.remove('view--active');
   speech.stop(); // Stop talking on view change
 }
 
@@ -145,6 +149,7 @@ function setupRoutes() {
     .on('/champions', () => renderTrack('champions'))
     .on('/lesson/:id', (params) => renderLesson(params.id))
     .on('/grownups', renderGrownups)
+    .on('/stickers', renderStickers)
     .notFound(() => {
       console.warn('Route not found, redirecting to home');
       router.navigate('/home');
@@ -216,6 +221,7 @@ function renderHome() {
   // Handle Track Selection
   const btnExplorers = document.getElementById('btn-explorers');
   const btnChampions = document.getElementById('btn-champions');
+  const btnStickers = document.getElementById('btn-stickers');
 
   if (btnExplorers) {
     btnExplorers.onclick = () => {
@@ -230,6 +236,13 @@ function renderHome() {
       audio.playClick();
       store.setTrack('champions');
       router.navigate('/champions');
+    };
+  }
+  
+  if (btnStickers) {
+    btnStickers.onclick = () => {
+      audio.playClick();
+      router.navigate('/stickers');
     };
   }
 
@@ -349,6 +362,7 @@ function renderTrack(trackId) {
       certBtn.innerHTML = '🖨️ Print My Certificate!';
       certBtn.onclick = () => {
         audio.playStar();
+        throwConfetti(4000);
         const certTrackName = document.getElementById('cert-track-name');
         const certStudentName = document.getElementById('cert-student-name');
         if (certTrackName) {
@@ -405,6 +419,12 @@ async function renderLesson(lessonId) {
 function renderGrownups() {
   DOM.grownupsView.classList.add('view--active');
   updateNav(true);
+}
+
+function renderStickers() {
+  DOM.stickersView.classList.add('view--active');
+  updateNav(true);
+  renderStickerBook(DOM.stickersView);
 }
 
 function escapeHtml(str) {
