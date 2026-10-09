@@ -163,9 +163,53 @@ function renderHome() {
     heroMascot.title = "Click me!";
     heroMascot.onclick = () => {
       audio.playStar();
-      speech.speak("Welcome to the Kids Computer Lab! Pick a track below to start learning!");
+      const profileName = store._state.activeProfile;
+      const greeting = profileName !== 'Guest' ? profileName : "there";
+      speech.speak(`Welcome to the Kids Computer Lab, ${greeting}! Pick a track below to start learning!`);
       heroMascot.style.animation = 'none';
       setTimeout(() => heroMascot.style.animation = 'pop-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)', 10);
+    };
+  }
+
+  // Handle Profile Selection
+  const profileSelect = document.getElementById('profile-select');
+  if (profileSelect) {
+    const updateProfileDropdown = () => {
+      profileSelect.innerHTML = '';
+      const names = store.getProfileNames();
+      names.forEach(name => {
+        const opt = document.createElement('option');
+        opt.value = name;
+        opt.textContent = name;
+        if (name === store._state.activeProfile) opt.selected = true;
+        profileSelect.appendChild(opt);
+      });
+      // Add 'New Player...' option
+      const newOpt = document.createElement('option');
+      newOpt.value = '__new__';
+      newOpt.textContent = '➕ New Player...';
+      profileSelect.appendChild(newOpt);
+    };
+
+    updateProfileDropdown();
+    
+    // Use standard event assignment so it can be updated
+    profileSelect.onchange = (e) => {
+      if (e.target.value === '__new__') {
+        const newName = prompt("What is your name?");
+        if (newName && newName.trim().length > 0) {
+          audio.playStar();
+          store.setProfile(newName.trim());
+          renderHome(); // refresh home to update resume banner etc.
+        } else {
+          // Revert back
+          updateProfileDropdown();
+        }
+      } else {
+        audio.playClick();
+        store.setProfile(e.target.value);
+        renderHome(); // refresh home to update resume banner etc.
+      }
     };
   }
 
@@ -306,8 +350,12 @@ function renderTrack(trackId) {
       certBtn.onclick = () => {
         audio.playStar();
         const certTrackName = document.getElementById('cert-track-name');
+        const certStudentName = document.getElementById('cert-student-name');
         if (certTrackName) {
           certTrackName.textContent = `The ${trackData.title} Track`;
+        }
+        if (certStudentName) {
+          certStudentName.textContent = store._state.activeProfile !== 'Guest' ? store._state.activeProfile : 'Computer Whiz';
         }
         setTimeout(() => window.print(), 500);
       };

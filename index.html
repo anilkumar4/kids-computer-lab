@@ -76,7 +76,15 @@
             Welcome to<br>
             <span class="text-primary">Kids</span> <span class="text-accent">Computer</span> <span class="text-success">Lab</span>!
           </h1>
-          <p class="hero__subtitle animate-slide-up" style="animation-delay: 0.1s;">
+          
+          <div class="profile-selector animate-slide-up" style="animation-delay: 0.1s; margin: var(--space-4) 0; background: var(--color-bg-card); padding: var(--space-3) var(--space-5); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); display: inline-flex; align-items: center; gap: var(--space-3); border: 2px solid var(--color-primary-light);">
+            <label for="profile-select" style="font-weight: bold; font-size: var(--text-lg); color: var(--color-text);">Who is playing?</label>
+            <select id="profile-select" style="padding: var(--space-2) var(--space-4); border-radius: var(--radius-full); font-size: var(--text-lg); font-weight: bold; border: 2px solid var(--color-primary); background: var(--color-bg); cursor: pointer; outline: none; font-family: var(--font-family-heading);">
+              <!-- Options injected by JS -->
+            </select>
+          </div>
+
+          <p class="hero__subtitle animate-slide-up" style="animation-delay: 0.2s;">
             A fun, safe place to learn how computers work. Choose your track below to start exploring!
           </p>
 
@@ -214,9 +222,11 @@
   <div id="certificate" class="certificate" style="display: none;">
     <div class="certificate__inner">
       <h1>🏆 Certificate of Achievement 🏆</h1>
-      <p>This certifies that you have completed</p>
+      <p>This certifies that</p>
+      <h2 id="cert-student-name" style="color: var(--color-primary); font-size: 3rem; margin: var(--space-2) 0; border-bottom: 2px dashed var(--color-surface-hover); display: inline-block; padding: 0 var(--space-8);">Student Name</h2>
+      <p>has successfully completed</p>
       <h2 id="cert-track-name">The Kids Computer Lab</h2>
-      <p>and are now a certified Computer Whiz!</p>
+      <p>and is now a certified Computer Whiz!</p>
       <div class="certificate__mascot">
         <svg viewBox="0 0 200 200" width="120" height="120">
           <rect x="55" y="42" width="90" height="72" rx="22" fill="#7ec8e3" stroke="#5cb3d4" stroke-width="2"/>

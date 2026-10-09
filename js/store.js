@@ -6,24 +6,20 @@
  */
 
 const STORAGE_KEY = 'kids-computer-lab-progress';
-const SCHEMA_VERSION = 1;
+const SCHEMA_VERSION = 2;
 
 /** Default state structure */
 function createDefaultState() {
+  const defaultProfile = { track: null, lessons: {}, badges: [], settings: { muted: false, speechEnabled: true } };
   return {
     version: SCHEMA_VERSION,
     profiles: {
-      default: {
-        track: null,
-        lessons: {},
-        badges: [],
-        settings: {
-          muted: false,
-          speechEnabled: true
-        }
-      }
+      'Khushant': { ...defaultProfile, track: 'explorers' },
+      'Khushika': { ...defaultProfile, track: 'explorers' },
+      'Gunjan': { ...defaultProfile, track: 'champions' },
+      'Guest': { ...defaultProfile }
     },
-    activeProfile: 'default'
+    activeProfile: 'Guest'
   };
 }
 
@@ -88,15 +84,29 @@ class ProgressStore {
     if (!current.version || current.version < 1) {
       current.version = 1;
       if (!current.profiles) {
-        current.profiles = { default: { track: null, lessons: {}, badges: [], settings: { muted: false, speechEnabled: true } } };
+        current.profiles = { 'Guest': { track: null, lessons: {}, badges: [], settings: { muted: false, speechEnabled: true } } };
       }
       if (!current.activeProfile) {
-        current.activeProfile = 'default';
+        current.activeProfile = 'Guest';
       }
       for (const key of Object.keys(current.profiles)) {
         if (!current.profiles[key].settings) {
           current.profiles[key].settings = { muted: false, speechEnabled: true };
         }
+      }
+    }
+
+    // Version 1 -> 2: Add specific profiles if missing
+    if (current.version < 2) {
+      current.version = 2;
+      const defaultProfile = { track: null, lessons: {}, badges: [], settings: { muted: false, speechEnabled: true } };
+      if (!current.profiles['Khushant']) current.profiles['Khushant'] = { ...defaultProfile, track: 'explorers' };
+      if (!current.profiles['Khushika']) current.profiles['Khushika'] = { ...defaultProfile, track: 'explorers' };
+      if (!current.profiles['Gunjan']) current.profiles['Gunjan'] = { ...defaultProfile, track: 'champions' };
+      if (current.profiles['default']) {
+        current.profiles['Guest'] = current.profiles['default'];
+        delete current.profiles['default'];
+        if (current.activeProfile === 'default') current.activeProfile = 'Guest';
       }
     }
 
@@ -260,6 +270,23 @@ class ProgressStore {
     this.profile.track = track;
     this._save();
     this._notify('track-change');
+  }
+
+  // --- Profile Management ---
+
+  /** Set active profile, creating it if it doesn't exist */
+  setProfile(name) {
+    if (!this._state.profiles[name]) {
+      this._state.profiles[name] = { track: null, lessons: {}, badges: [], settings: { muted: false, speechEnabled: true } };
+    }
+    this._state.activeProfile = name;
+    this._save();
+    this._notify('profile-change');
+  }
+
+  /** Get all profile names */
+  getProfileNames() {
+    return Object.keys(this._state.profiles);
   }
 
   // --- Reset ---
