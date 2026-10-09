@@ -6,6 +6,7 @@
  */
 
 import audio from '../audio.js';
+import speech from '../speech.js';
 
 /**
  * Render a quiz step.
@@ -48,6 +49,8 @@ export function renderQuiz(quizData, options = {}) {
     if (isUKG) prompt.style.fontSize = 'var(--text-2xl)';
     prompt.textContent = q.prompt;
     container.appendChild(prompt);
+    
+    speech.speak(q.prompt);
 
     // Options grid
     const optionsGrid = document.createElement('div');
@@ -153,6 +156,8 @@ export function renderQuiz(quizData, options = {}) {
       ${question.explanation ? `<div class="quiz__explanation">${escapeHtml(question.explanation)}</div>` : ''}
     `;
     container.appendChild(feedback);
+
+    speech.speak(feedbackText + (question.explanation ? ". " + question.explanation : ""));
 
     // Next question or complete
     const nextBtn = document.createElement('button');

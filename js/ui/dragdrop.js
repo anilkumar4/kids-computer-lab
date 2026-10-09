@@ -5,6 +5,7 @@
  */
 
 import audio from '../audio.js';
+import speech from '../speech.js';
 
 /**
  * Render a sort/match activity step.
@@ -199,6 +200,7 @@ export function renderSortGame(stepData, options = {}) {
           ✅ ${escapeHtml(item.label)} → ${escapeHtml(zone.title)}. Correct!
         </div>
       `;
+      speech.speak(`${item.label} goes in ${zone.title}. Correct!`);
     } else {
       placedItems.delete(item.id); // Allow retry
       audio.playIncorrect();
@@ -214,6 +216,7 @@ export function renderSortGame(stepData, options = {}) {
           Hmm, ${escapeHtml(item.label)} doesn't go there. Try again! 🤔
         </div>
       `;
+      speech.speak(`Hmm, ${item.label} doesn't go in ${zone.title}. Try again!`);
     }
 
     selectedItem = null;

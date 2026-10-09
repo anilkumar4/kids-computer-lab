@@ -5,6 +5,7 @@
  */
 
 import audio from '../audio.js';
+import speech from '../speech.js';
 
 /**
  * Render a hotspot interactive diagram step.
@@ -142,6 +143,8 @@ export function renderHotspot(stepData, options = {}) {
         <div class="hotspot-info__desc">${escapeHtml(hs.description)}</div>
       </div>
     `;
+
+    speech.speak(hs.label + ". " + hs.description);
 
     // Check if all visited
     if (visited.size >= stepData.hotspots.length) {

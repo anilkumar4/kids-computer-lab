@@ -54,8 +54,24 @@ class SpeechController {
     try {
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = options.lang || 'en-US';
-      utterance.rate = options.rate || 0.9;
-      utterance.pitch = options.pitch || 1.1;
+      // Slow it down and make it more enthusiastic for kids
+      utterance.rate = options.rate || 0.85; 
+      utterance.pitch = options.pitch || 1.3;
+
+      // Try to find a friendly female voice (often sounds better to kids)
+      const voices = speechSynthesis.getVoices();
+      if (voices.length > 0) {
+        // Look for Google voices first, they are usually high quality
+        let bestVoice = voices.find(v => v.name.includes('Google UK English Female') || v.name.includes('Google US English'));
+        // Fallback to any female voice or natural voice
+        if (!bestVoice) bestVoice = voices.find(v => (v.name.includes('Female') || v.name.includes('Natural')) && v.lang.startsWith('en'));
+        // Fallback to first English voice
+        if (!bestVoice) bestVoice = voices.find(v => v.lang.startsWith('en'));
+        
+        if (bestVoice) {
+          utterance.voice = bestVoice;
+        }
+      }
 
       utterance.onstart = () => {
         this._speaking = true;
